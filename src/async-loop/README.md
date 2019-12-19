@@ -23,6 +23,18 @@ The above will not output the numbers 0 through 9, but will simply print the num
 9
 ```
 
-The issue is that the anonymous function keeps a reference to i. At the time console.log gets called, the for loop has already finished, and the value of i has been set to 10.
+The issue is that the anonymous function keeps a reference to `i`. At the time console.log gets called, the for loop has already finished, and the value of `i` has been set to 10.
 
-In order to get the desired behavior, it is necessary to create a copy of the value of i.
+In order to get the desired behavior, it is necessary to create a copy of the value of `i`.
+
+In order to copy the value of the loop's index variable, it is best to use an anonymous wrapper.
+
+```
+for(var i = 0; i < 10; i++) {
+    (function(e) {
+        setTimeout(function() {
+            console.log(e);  
+        }, 1000);
+    })(i);
+}
+```
