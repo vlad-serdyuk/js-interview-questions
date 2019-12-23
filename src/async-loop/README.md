@@ -8,7 +8,7 @@ for(var i = 0; i < 10; i++) {
 }
 ```
 
-The above will not output the numbers 0 through 9, but will simply print the number 10 ten times.
+The above will not output the numbers 0 through 9, but will simply print the number `9` 10 ten times.
 
 ```
 9
