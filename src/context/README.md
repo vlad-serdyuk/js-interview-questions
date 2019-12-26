@@ -58,11 +58,13 @@ A common misconception is that `this` inside of test refers to Foo; while in fac
 Foo.doAfterTimeout = function() {
     console.log(this);
 }
-Foo.method = function() {
+Foo.someMethod = function() {
     setTimeout(this.doAfterTimeout, 100); // output is global object
     test();
 }
 ```
 
-It happens because `setTimeout` belongs to the global object. You can invoke `setTimeout` via `window.setTimeout` it would be the same thing.
+The method `setTimeout` is a little special: it sets `this = global object` for the function call. So for `console.log(this)` it tries to get `window` in a browser. In other similar cases, usually `this` just becomes undefined.
+
+It's posiible to invoke `setTimeout` via `window.setTimeout` it would be the same thing.
 
