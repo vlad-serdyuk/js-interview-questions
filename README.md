@@ -10,6 +10,7 @@ with related explanations and links for further reading.
 *☝ Note that this project is meant to be used for learning and researching purposes.*
 
 * [Context](src/context)
+* [Eval](src/eval)
 * [Promise-reduce](src/promise-reduce)
 * [async-loop](src/async-loop)
 * [Custom debounce](src/debounce)
