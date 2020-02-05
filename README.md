@@ -14,3 +14,4 @@ with related explanations and links for further reading.
 * [Promise-reduce](src/promise-reduce)
 * [async-loop](src/async-loop)
 * [Custom debounce](src/debounce)
+* [Tree shaking](src/tree-shaking)
